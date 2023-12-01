@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+input:focus{
+    outline: none !important;
+}
+html{
+    scroll-behavior: smooth;
+    /* font-family: sans-serif; */
+    font-family: 'Poppins';
+
+}
+section{
+    z-index: 99;
+}
+
+/* rotate 360 keyframe */
+@keyframes rotate360
+{
+    0%{
+        transform: rotate(0deg);
+    }
+    0%{
+        transform: rotate(360deg);
+    }
+}
+/*end of rotate 360 keyframe */
+
+
+/* title circle */
+@keyframes moveCircle {
+    0%,100%{
+        top: -15%;
+        left: -3%;
+      }
+    25% {
+        top: -15%;
+        left: 98%;
+      }
+      50%{
+        top: 90%;
+        left: 98%;
+      }
+      75% {
+        top: 90%;
+        left: -3%;
+      }
+  }
+@keyframes moveCircle2 {
+    0%,100%{
+        top: 90%;
+        left: 98%;
+      }
+    25% {
+        top: 90%;
+        left: -3%;
+      }
+      50%{
+        top: -15%;
+        left: -3%;
+      }
+      75% {
+        top: -15%;
+        left: 98%;
+      }
+  }
+
+.moveLine .circle{
+    position: absolute;
+    /* top: -3px; */
+    /* left: 0px; */
+    width: 10px;
+    height: 10px;
+    background-color: #DF4838;
+    border-radius: 50%; 
+    animation: moveCircle 3s linear infinite;
+}
+.moveLine .circle-2{
+    position: absolute;
+    /* left: 0px; */
+    width: 10px;
+    height: 10px;
+    background-color: #DF4838;
+    border-radius: 50%; 
+    animation: moveCircle2 3s linear infinite;
+}
+/* end of title circle */
+
+
+/* universal css */
+
+/* login button */
+/* 15 */
+.login-btn {
+    background: #b621fe;
+    border: none;
+    z-index: 1;
+  }
+  .login-btn:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #663dff;
+    border-radius: 5px;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+  }
+  .login-btn:hover {
+    color: #fff;
+  }
+  .login-btn:hover:after {
+    left: 0;
+    width: 100%;
+  }
+  .login-btn:active {
+    top: 2px;
+  }
+/*end of login button */
+
+
+.navbar{
+    /* transition: ; */
+    font-family: 'Poppins';
+}
+.nav_scrolled{
+    background-color: white;
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+
+}
+
+.navbar ul a{
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    /* background-color: red; */
+}
+
+.navbar ul a::before{
+    position: absolute;
+    content: '';
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 100px;
+    background-color: #DF4838;
+    transform: scaleX(0); /* Initially hide the underline */
+    transition: transform 0.5s ease; /* Add a smooth transition effect */
+}
+.navbar ul a.active::before{
+    transform: scaleX(1);
+}
+.navbar ul a:hover::before{
+    /* width: 100%; */
+    transform: scaleX(1);
+}
+
+/* Animation for the cross icon */
+.mobile-icon{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    /* background-color: darkblue; */
+}
+.mobile-icon span{
+    background-color: #2D85C6;
+    height: 3px;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-0%,0px);
+    transition: transform 0.5s, width 0.5s;
+    
+}
+.mobile-icon.active:hover span{
+    background-color: crimson;
+}
+.mobile-icon .line-1{
+    transform: translate(-50%,-10px);
+    width: 100%;
+}
+.mobile-icon .line-3{
+    transform: translate(100%,10px);
+    width: 25%;
+}
+.mobile-icon.active .line-1{
+    transform: translate(-50%,10%) rotate(-45deg);
+}
+.mobile-icon.active .line-2{
+    transform: translate(-50%,50%) rotate(45deg);
+    width: 100%;
+}
+.mobile-icon.active .line-3{
+    width: 0;
+}
+
+.dropdown-btn:hover{
+    /* height: 100px; */
+    margin-bottom:0 ;
+}
+.dropdown-btn .dropdown-icon{
+
+    transition: all 0.6s ease;
+}
+.dropdown-btn:hover .dropdown-icon{
+    transform: rotateX(180deg);
+}
+
+
+.dropdown-btn:hover .dropdown-menu{
+    z-index: 998;
+    opacity: 1;
+    visibility: visible;
+    top: 60px;
+}
+
+.dropdown-menu{
+    top: 120px;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -999;
+   
+    transition: all 0.5s ease;
+   
+}
+.dropdown-menu .content{
+    box-shadow: -2px 0px 25px 0px rgba(178,161,161,0.75);
+    -webkit-box-shadow: -2px 0px 25px 0px rgba(178,161,161,0.75);
+    -moz-box-shadow: -2px 0px 25px 0px rgba(178,161,161,0.75);
+}
+
+
+@media screen and (max-width:1140px) {
+    .dropdown-menu .content{
+        box-shadow: none;
+    }
+    
+}
+.footer{
+    /* position: relative; */
+    background: linear-gradient(to right, rgba(229, 30, 30, 0.8), rgba(215, 178, 176, 0.85)), url('https://img.freepik.com/free-photo/abstract-blue-smooth-wave-lines_1017-24862.jpg?w=1380&t=st=1692081955~exp=1692082555~hmac=5d4957ef3f6baa77580ea59c442aba473f8cdbfeaf5083ee5210928c099439a6');
+    /* background: linear-gradient(to right, rgba(43, 56, 143, 0.8), rgba(27, 117, 187, 0.85)), url('https://img.freepik.com/free-photo/abstract-blue-smooth-wave-lines_1017-24862.jpg?w=1380&t=st=1692081955~exp=1692082555~hmac=5d4957ef3f6baa77580ea59c442aba473f8cdbfeaf5083ee5210928c099439a6');  */
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    font-family: 'Poppins';
+}
+
+
+
+@media (max-width: 1140px){ 
+    .mobnav{
+        height: 100vh;
+        position: fixed;
+        background-color: white;
+        top: 0;
+        left: -100%;
+        /* color: white; */
+        transition: all 0.5s ease;
+        z-index: 90;
+    }
+    .mobnav .nav-container{
+      display: block;
+      
+  }
+  .active {
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+.dropdown-menu{
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+}
+.dropdown-menu.active{
+    display: block !important;
+
+}
+
+}
