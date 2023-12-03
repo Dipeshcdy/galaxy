@@ -27,11 +27,11 @@
                     @endforeach
                     @else
                         <div class="swiper-slide">
-                            <div class="home  md:px-20 px-5 lg:py-36 py-10 grid lg:grid-cols-2 grid-cols-1 gap-28">
-                                <div class=" lg:flex lg:order-1 order-2 mr-32">
+                            <div class="home  md:px-20 px-5 lg:py-36 py-10 grid lg:grid-cols-2 grid-cols-1 gap-10 sm:gap-28">
+                                <div class=" lg:flex lg:order-1 order-2 lg:mr-32">
                                     <div class="my-auto">
                                         <h1 class="text-[#DF4838] font-bold text-4xl wow animate__animated animate__fadeInDown">Deals with surgical and chemical products</h1>
-                                        <p class="text-justify font-semibold text-xl my-10 text-gray-500 wow animate__animated animate__fadeInLeft">Amazing Infosys stands as a paramount IT company in Nepal, setting remarkable standards of innovation and excellence with a pioneering spirit and a track record of cutting-edge solutions.
+                                        <p class="text-justify font-semibold text-xl my-10 text-gray-500 wow animate__animated animate__fadeInLeft">At Galaxy Trade Concern, we take pride in being at the forefront of innovation and quality in the realm of surgical and chemical products. With a relentless commitment to advancing healthcare and industrial solutions, we strive to be your go-to partner for excellence.
                                         </p>
                                         <div class="mt-10 wow animate__animated animate__fadeInDown animate__delay-1s">
                                             <!-- <a href="" class="px-9 btn hover:!bg-left  !bg-right duration-500 py-4 font-semibold text-xl rounded-md text-white" >Get started</a> -->
@@ -97,7 +97,7 @@
         {{-- end of achievement --}}
         
         {{-- our services --}}
-        <div id="services_section" class="md:px-20 px-5 py-10 services">
+        <div id="services_section" class="md:px-20 px-5 pt-10 services">
             <div class="wow animate__animated animate__fadeInUp">
                 <div class="flex">
                     <div class="relative moveLine px-12 py-2 mx-auto  border-2  rounded-md shadow-lg shadow-gray-300">
@@ -107,7 +107,7 @@
                     </div>
                 </div>
             </div>
-            <h2 class="mt-8 text-4xl font-semibold  text-center wow animate__animated animate__zoomIn">All round digital solution from the experts</h2>
+            <h2 class="mt-8 lg:text-4xl text-xl font-semibold  text-center wow animate__animated animate__zoomIn">Chemical and Surgical Equipments All Over Nepal</h2>
             
             @if (isset($services) && count($services)>0)
             <div class="hidden lg:grid lg:grid-cols-4  my-10 wow animate__animated animate__zoomIn h-auto min-h-[500px]">
@@ -143,151 +143,101 @@
 
             {{-- mobile screen --}}
             <div class="lg:hidden grid grid-cols-2 gap-4 mt-10">
-                @foreach ($services as $service)
-                    <a href="{{route('services.individual',$service->slug)}}" class=" btn capitalize text-white text-sm hover:!bg-right hover:-translate-y-2 items-center flex py-3 px-4 shadow-xl rounded-xl duration-500">
-                        {{$service->title}}
+                    <a  class=" btn capitalize text-white text-sm hover:!bg-right hover:-translate-y-2 items-center flex py-3 px-4 shadow-xl rounded-xl duration-500">
+                        Chemical
                     </a>
-                @endforeach
+                    <a  class=" btn capitalize text-white text-sm hover:!bg-right hover:-translate-y-2 items-center flex py-3 px-4 shadow-xl rounded-xl duration-500">
+                        Surgical
+                    </a>
             </div>
             {{-- end of mobile screen --}}
             @else
-            <div class="hidden lg:grid lg:grid-cols-4 grid-cols-2 my-10 wow animate__animated animate__zoomIn h-auto">
+            <div class="hidden lg:grid lg:grid-cols-4 grid-cols-2 my-10 wow animate__animated animate__zoomIn h-[50vh]">
                 <div class="button-div">
                     <div class="flex mt-6">
                         <button data-target="content-1" class="home-services-button active capitalize text-sm items-center flex py-3 px-4 ml-auto bg-white shadow-xl rounded-xl hover:bg-slate-200 w-[250px] duration-500">
-                            <i class=" mr-3  fa-solid fa-code text-xl text-[#2D85C6]"></i>Web Development
+                            <i class=" mr-3  fa-solid fa-code text-xl text-[#2D85C6]"></i>Chemical
                             
                         </button>
                     </div>
                     <div class="flex mt-6">
                         <button data-target="content-2" class="home-services-button capitalize text-sm items-center flex py-3 px-4 ml-auto bg-white shadow-xl rounded-xl hover:bg-slate-200 w-[250px]  duration-500">
-                            <i class=" mr-3  fa fa-bullhorn text-xl text-[#2D85C6] -rotate-45"></i>Digital Marketing
+                            <i class=" mr-3  fa fa-bullhorn text-xl text-[#2D85C6] -rotate-45"></i>Surgical
     
                         </button>
                     </div>
-                    <div class="flex mt-6">
-                        <button data-target="content-3" class="home-services-button capitalize text-sm items-center flex py-3 px-4 ml-auto bg-white shadow-xl rounded-xl hover:bg-slate-200 w-[250px] duration-500">
-                            <i class=" mr-3  fa fa-mobile text-xl text-[#2D85C6]"></i>Application Development
-    
-                        </button>
-                    </div>
-                    <div class="flex mt-6">
-                        <button data-target="content-4" class="home-services-button capitalize text-sm items-center flex py-3 px-4 ml-auto bg-white shadow-xl rounded-xl hover:bg-slate-200 w-[250px] duration-500">
-                            <i class=" mr-3  fa fa-comment-sms text-xl text-[#2D85C6]"></i>Bulk sms
-    
-                        </button>
-                    </div>
-                    <div class="flex mt-6">
-                        <button data-target="content-5" class="home-services-button capitalize text-sm items-center flex py-3 px-4 ml-auto bg-white shadow-xl rounded-xl hover:bg-slate-200 w-[250px] duration-500">
-                            <i class=" mr-3  fa-solid fa-desktop text-xl text-[#2D85C6]"></i>software development
-    
-                        </button>
-                    </div>
-                    <div class="flex mt-6">
-                        <button data-target="content-6" class="home-services-button capitalize text-sm items-center flex py-3 px-4 ml-auto bg-white shadow-xl rounded-xl hover:bg-slate-200 w-[250px] duration-500">
-                            <i class=" mr-3  fa fa-print text-xl text-[#2D85C6]"></i>printing / branding
-    
-                        </button>
-                    </div>
+                   
                 </div>
                 <div class="col-span-3 px-10 content-div relative">
                     
                     <div id="content-1" class="home-services-content active p-5 white lg:h-full rounded-xl content grid grid-cols-2 gap-5">
                         <div class="flex">
                             <div class="m-auto">
-                                <h2 class="mb-5 font-bold text-xl capitalize">web development</h2>
-                                <p class="text-justify">Unfolds limitless digital possiblities, crafting dynamic and captivating 
-                                    online experiences that redefine business. Our team's expertise ensures 
-                                    tailored solutions that cater to diverse business needs and elevate digital 
-                                    presence.</p>
+                                <h2 class="mb-5 font-bold text-xl capitalize">Chemical</h2>
+                                <p class="text-justify">Discover tailored chemical solutions with Galaxy Trade Concern. Our precision formulations, stringent quality assurance, and eco-friendly options cater to diverse industries. Partner with us for effective, responsible, and high-quality chemical products meeting your specific needs.</p>
                             </div>
                         </div>
                         <div class=" w-full">
-                            <img class="w-full  object-cover object-center rounded-xl" src="https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040428.jpg?w=996&t=st=1692177936~exp=1692178536~hmac=8a20fbfdf126199b0e7336ebd1b8a98b015d53361d1be8dcde2b91e2c83c3b62" alt="">
+                            <img class="w-full  object-cover object-center rounded-xl" src="{{asset('images/chemical.jpg')}}" alt="">
                         </div>
                     </div>
                     <div id="content-2" class="home-services-content p-5 white h-full rounded-xl content grid grid-cols-2 gap-5">
                         <div class="flex">
                             <div class="m-auto">
-                                <h2 class="mb-5 font-bold text-xl capitalize">Digital Marketing</h2>
-                                <p class="text-justify">Comprehensive services, harnessing the power of technology to elevate
-                                    brands and engage audiences in the digital realm. Their expertise 
-                                    transforms digital landscapes into thriving business avenues.</p>
+                                <h2 class="mb-5 font-bold text-xl capitalize">Surgical</h2>
+                                <p class="text-justify">Galaxy Trade Concern offers cutting-edge surgical instruments designed for precision and efficiency across various medical specialties. Our commitment to quality and comprehensive training ensures healthcare professionals have the best tools for optimal patient care.</p>
                             </div>
                         </div>
                         <div class=" w-full flex">
-                            <img class="w-full my-auto rounded-xl" src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?t=st=1692174264~exp=1692174864~hmac=de60237469390a3c5724a48b3599acfb22b93748b9af087cfe1e387507988e3e" alt="">
+                            <img class="w-full my-auto rounded-xl" src="{{asset('images/surgical.jpg')}}" alt="">
                         </div>
                     </div>
-                    <div id="content-3" class="home-services-content p-5 white h-full rounded-xl content grid grid-cols-2 gap-5">
-                        <div class="flex">
-                            <div class="m-auto">
-                                <h2 class="mb-5 font-bold text-xl capitalize">application development</h2>
-                                <p class="text-justify">Delivering excellence in application development, software solutions 
-                                    that cater to specific client objectives, combining innovation with
-                                    practicality for optimal user experiences. Our comprehensive services
-                                    span from concept to deployment, driving business towards technological
-                                    success.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="h-full flex w-full">
-                            <img class="h-full w-full my-auto object-cover object-center rounded-xl" src="https://img.freepik.com/free-vector/new-app-development-desktop_23-2148684987.jpg?w=740&t=st=1692177988~exp=1692178588~hmac=09e8238f5ff245c75f50eb792bf15447cc7df347688333fd6d24e3f5f390c5f4" alt="">
-                        </div>
+                    
+                </div>
+            </div>
+            {{-- mobile screen --}}
+            <div class="lg:hidden grid grid-cols-2 gap-4 mt-10">
+                <button data-target="mobile-content-1" class="mobileServicesBtn btn capitalize text-white text-sm hover:!bg-right -translate-y-2 items-center flex py-3 px-4 shadow-xl rounded-xl duration-500">
+                    Chemical
+                </button>
+                <button data-target="mobile-content-2" class=" mobileServicesBtn btn capitalize text-white text-sm hover:!bg-right hover:-translate-y-2 items-center flex py-3 px-4 shadow-xl rounded-xl duration-500">
+                    Surgical
+                </button>
+            </div>
+            <div class="relative h-[60vh] sm:hidden">
+                <div id="mobile-content-1" class="absolute mobileServicesBtn-content active top-0 left-0 w-full h-full p-5 white lg:h-full rounded-xl content">
+                    <h2 class="mb-5 font-bold text-xl capitalize">Chemical</h2>
+                    <div class=" w-full">
+                        <img class="w-full  object-cover object-center rounded-xl" src="{{asset('images/chemical.jpg')}}" alt="">
                     </div>
-                    <div id="content-4" class="home-services-content p-5 white h-full rounded-xl content grid grid-cols-2 gap-5">
-                        <div class="flex">
-                            <div class="m-auto">
-                                <h2 class="mb-5 font-bold text-xl capitalize">bulk sms</h2>
-                                <p class="text-justify">Enabling businesses to effortlessly reach their target audiences while
-                                    ensuring seamless integration and impactful messaging strategies.
-                                    Elevate your outreach and engagement with our efficient and reliable platform.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="h-full flex w-full">
-                            <img class="h-full w-full my-auto object-cover object-center rounded-xl" src="https://img.freepik.com/free-vector/appointment-booking-with-smartphone-woman_23-2148561973.jpg?w=740&t=st=1692202970~exp=1692203570~hmac=85b532061b8f99be4d94264d65dec8fe75620774307797fd6e5c7a9870eefd48" alt="">
-                        </div>
-                    </div>
-                    <div id="content-5" class="home-services-content p-5 white h-full rounded-xl content grid grid-cols-2 gap-5">
-                        <div class="flex">
-                            <div class="m-auto">
-                                <h2 class="mb-5 font-bold text-xl capitalize">software development</h2>
-                                <p class="text-justify">Our expertise encompasses the full software
-                                    development lifecycle, ensuring innovation, quality, and client
-                                    satisfaction & drive technological advancement for business accross
-                                    diverse sectors.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="h-full flex w-full">
-                            <img class="h-full w-full my-auto object-cover object-center rounded-xl" src="https://img.freepik.com/free-vector/desktop-smartphone-app-development_23-2148683810.jpg?w=740&t=st=1692203062~exp=1692203662~hmac=5a2fd752335cfc1e427dc19121cbf7bd5dfb683d11f20c59fa167f4a10f61de1" alt="">
-                        </div>
-                    </div>
-                    <div id="content-6" class="home-services-content p-5 white h-full rounded-xl content grid grid-cols-2 gap-5">
-                        <div class="flex">
-                            <div class="m-auto">
-                                <h2 class="mb-5 font-bold text-xl capitalize">printing / branding</h2>
-                                <p class="text-justify">Catering to various need from marketing
-                                    materials to branding collateral, all while ensuring a professional
-                                    and impactful outcome. Experience the fusion of creativity and top-notch
-                                    printing at our service.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="h-full flex w-full">
-                            <img class="h-full w-full my-auto object-cover object-center rounded-xl" src="https://img.freepik.com/free-vector/stationery-design-set-editable-vector-format_91128-2058.jpg?w=996&t=st=1692203169~exp=1692203769~hmac=631d754c5496a57b2039c929279d2bda2b5323e67c6f67c701e9ad585dc046fb" alt="">
+                    <div class="flex mt-5">
+                        <div class="m-auto">
+                            <p class="text-justify">Discover tailored chemical solutions with Galaxy Trade Concern. Our precision formulations, stringent quality assurance, and eco-friendly options cater to diverse industries. Partner with us for effective, responsible, and high-quality chemical products meeting your specific needs.</p>
                         </div>
                     </div>
                 </div>
+                <div id="mobile-content-2" class="absolute mobileServicesBtn-content top-0 left-0 w-full h-full p-5 white lg:h-full rounded-xl content">
+                    <h2 class="mb-5 font-bold text-xl capitalize">Surgical</h2>
+                    <div class=" w-full">
+                        <img class="w-full  object-cover object-center rounded-xl" src="{{asset('images/surgical.jpg')}}" alt="">
+                    </div>
+                    <div class="flex mt-5">
+                        <div class="m-auto">
+                            <p class="text-justify">Galaxy Trade Concern offers cutting-edge surgical instruments designed for precision and efficiency across various medical specialties. Our commitment to quality and comprehensive training ensures healthcare professionals have the best tools for optimal patient care.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
             </div>
+            {{-- end of mobile screen --}}
             @endif
         </div>
     
     
         {{-- end of our services --}}
         {{-- slider --}}
-        <div id="products_section" class="md:px-36 px-5 py-20 pt-36 relative">
+        <div id="products_section" class="md:px-36 px-5 pb-20 sm:pt-20  relative">
             <div class="wow animate__animated animate__fadeInUp">
                 <div class="flex">
                     <div class="relative moveLine px-12 py-2 mx-auto  border-2  rounded-md shadow-lg shadow-gray-300">
@@ -313,7 +263,7 @@
                             {{-- end of element to be in loop --}}
                             @else    
                             <div class="swiper-slide cursor-pointer">
-                              <img class="rounded-xl object-cover object-center w-full h-full" src="{{asset('images/surgical1.png')}}" />
+                              <img class="rounded-xl object-cover object-center w-full h-full" src="{{asset('images/surgical.jpg')}}" />
                             </div>
                             <div class="swiper-slide cursor-pointer">
                               <img class="rounded-xl object-cover object-center w-full h-full" src="{{asset('images/surgical2.jpeg')}}" />
@@ -343,32 +293,18 @@
                         </div>
                     @else
                         <h2 class="text-4xl font-semibold text-[#2D85C6] text-center lg:text-left">Surgical And Chemical Products</h2>
-                        <div class="grid grid-cols-2 gap-5 mt-5">
-                            <a href="#" class=" btn capitalize text-white text-sm hover:!bg-right hover:-translate-y-2 items-center flex py-3 px-4 shadow-xl rounded-xl duration-500">
-                                <i class=" mr-3  fa fa-bullhorn text-xl "></i>
-                                Social Media Marketing
-                            </a>
-                            <a href="#" class=" btn capitalize text-sm text-white hover:!bg-right hover:-translate-y-2 items-center flex py-3 px-4 shadow-xl rounded-xl duration-500">
-                                <i class=" mr-3  fa fa-paint-brush text-xl "></i>
-                                Graphic Design
-                            </a>
-                            <a href="#" class="btn capitalize text-sm text-white hover:!bg-right hover:-translate-y-2 items-center flex py-3 px-4 shadow-xl rounded-xl  duration-500">
-                                <i class=" mr-3  fa-brands fa-searchengin text-xl "></i>
-                                SEO
-                            </a>
-                            <a href="#" class="btn  capitalize text-sm text-white hover:!bg-right hover:-translate-y-2 items-center flex py-3 px-4 shadow-xl rounded-xl duration-500">
-                                <i class=" mr-3  fa-regular fa-file-video text-xl "></i>
-                                Animation & Digital Video
-                            </a>
-                            <a href="#" class="btn  capitalize text-sm text-white hover:!bg-right hover:-translate-y-2 items-center flex py-3 px-4 shadow-xl rounded-xl duration-500">
-                                <i class=" mr-3  fa-regular fa-envelope text-xl "></i>
-                                Email Marketing
-                            </a>
-                            <a href="#" class="btn capitalize text-sm text-white hover:!bg-right hover:-translate-y-2 items-center flex py-3 px-4 shadow-xl rounded-xl duration-500">
-                                <i class=" mr-3  fa-brands fa-amazon-pay text-xl"></i>
-                                PPC
-                            </a>
+                        <div class="mt-5">
+                            <p>
+                                Galaxy Trade Concern is your comprehensive solution provider, delivering cutting-edge surgical instruments for precise and efficient medical procedures across diverse specialties. Our commitment to quality extends to chemical services, offering tailored formulations that meet stringent industry standards. From precision in surgery to eco-friendly chemical solutions, we ensure your needs are met with excellence, innovation, and a customer-centric approach.
+                            </p>
                         </div>
+                        <!--<div class="grid grid-cols-2 gap-5 mt-5">-->
+                        <!--    <a href="#" class=" btn capitalize text-white text-sm hover:!bg-right hover:-translate-y-2 items-center flex py-3 px-4 shadow-xl rounded-xl duration-500">-->
+                        <!--        <i class=" mr-3  fa fa-bullhorn text-xl "></i>-->
+                        <!--        Social Media Marketing-->
+                        <!--    </a>-->
+                           
+                        <!--</div>-->
                     @endif
                 </div>
             </div>
@@ -389,11 +325,14 @@
                 </div>
             </div>
             
-            <div class="grid grid-cols-2 mt-10 gap-8">
-                <div class="my-auto">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas explicabo maxime accusamus distinctio dolorum! Vel commodi voluptatum magni dolore debitis assumenda, natus ipsa cumque quidem repellat, qui enim harum aliquam!</p>
+            <div class="grid md:grid-cols-2 mt-10 gap-8">
+                <div class="my-auto md:order-1 order-2">
+                <h2 class="font-bold text-2xl mb-5">Sirish Chaudhary, Proprietor</h2>
+                    <p class="text-justify">
+                   
+                    At the helm of Galaxy Trade Concern is Sirish Chaudhary, the visionary proprietor and driving force behind our commitment to excellence. With a profound passion for advancing healthcare and industrial solutions, Sirish Chaudhary has led the company with a keen focus on innovation, quality, and customer satisfaction. Their extensive experience in the industry, coupled with a dedication to staying at the forefront of advancements, ensures that Galaxy Trade Concern continues to be a trusted partner in delivering top-tier surgical and chemical products</p>
                 </div>
-                <div> 
+                <div class="md:order-2 order-1">  
                     <img class="w-[350px]" src="{{asset('images/propritor.jpg')}}" alt="">
                 </div>
             </div>
@@ -401,7 +340,7 @@
         {{-- end of about proprietor section --}}
     
         {{-- request on quote --}}
-        <div id="contact_section" class="md:px-36 px-5 py-10 request-on-quote">
+        <div id="contact_section" class="md:px-36 px-5 md:py-10 request-on-quote">
             
             <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-36 gap-4 mt-20">
                 <div class="pr-20">
@@ -443,7 +382,7 @@
                             @enderror
                         </div>
                         <div class="mt-10">
-                            <input type="submit" class="py-4 px-9 cursor-pointer rounded-md font-semibold  hover:bg-red-600 bg-red-500 text-white transition-colors ease-linear" value="Request">
+                            <input type="submit" class="py-4 px-9 cursor-pointer rounded-md font-semibold  hover:bg-red-600 bg-red-500 text-white transition-colors ease-linear" value="Request (Not Done Yet!)">
                         </div>
                     </form>
                 </div>
@@ -591,78 +530,78 @@
             </div>
         </section> -->
         {{-- end of testimonial section --}}
-        {{-- brands --}}
-        <div class="md:px-36 px-5 py-10 mt-10">
-            <div class="wow animate__animated animate__fadeInUp">
-                <div class="flex">
-                    <div class="relative moveLine px-12 py-2 mx-auto border-2  rounded-md shadow-lg shadow-gray-300">
-                        <h2 class="text-red-600 font-[600] text-md   text-center wow animate__animated animate__fadeInUp">Brands</h2>
-                        <div class="circle"></div>
-                        <div class="circle-2"></div>
-                    </div>
-                </div>
-            </div>
-            <h2 class="mt-2 text-4xl font-semibold text-center wow animate__animated animate__zoomIn">Top companies we have worked with</h2>
-            <div class="grid lg:grid-cols-8 mobile:grid-cols-3 grid-cols-2  gap-2 my-14 wow animate__animated animate__zoomIn">
-                @if (isset($companies) && count($companies)>0)
-                    @foreach ($companies as $company )
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{$company->getFirstMediaUrl('company') != null ? $company->getFirstMediaUrl('company') : null }}" alt="image">
-                    </div>
-                    @endforeach
-                @else
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{asset('images/publisher.png')}}" alt="">
-                    </div>
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{asset('images/logo company.png')}}" alt="">
-                    </div>
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{asset('images/samsung.png')}}" alt="">
-                    </div>
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{asset('images/soundware.png')}}" alt="">
-                    </div>
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{asset('images/sample.png')}}" alt="">
-                    </div>
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{asset('images/company.png')}}" alt="">
-                    </div>
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{asset('images/brand.png')}}" alt="">
-                    </div>
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{asset('images/fruity.png')}}" alt="">
-                    </div>
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{asset('images/publisher.png')}}" alt="">
-                    </div>
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{asset('images/logo company.png')}}" alt="">
-                    </div>
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{asset('images/samsung.png')}}" alt="">
-                    </div>
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{asset('images/soundware.png')}}" alt="">
-                    </div>
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{asset('images/sample.png')}}" alt="">
-                    </div>
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{asset('images/company.png')}}" alt="">
-                    </div>
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{asset('images/brand.png')}}" alt="">
-                    </div>
-                    <div class="h-16 overflow-hidden flex items-center">
-                        <img class="w-full object-cover object-center" src="{{asset('images/fruity.png')}}" alt="">
-                    </div>
-                @endif
-            </div>
-        </div>
-        {{-- end of brands --}}
+        <!--{{-- brands --}}-->
+        <!--<div class="md:px-36 px-5 py-10 mt-10">-->
+        <!--    <div class="wow animate__animated animate__fadeInUp">-->
+        <!--        <div class="flex">-->
+        <!--            <div class="relative moveLine px-12 py-2 mx-auto border-2  rounded-md shadow-lg shadow-gray-300">-->
+        <!--                <h2 class="text-red-600 font-[600] text-md   text-center wow animate__animated animate__fadeInUp">Brands</h2>-->
+        <!--                <div class="circle"></div>-->
+        <!--                <div class="circle-2"></div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--    <h2 class="mt-2 text-4xl font-semibold text-center wow animate__animated animate__zoomIn">Top companies we have worked with</h2>-->
+        <!--    <div class="grid lg:grid-cols-8 mobile:grid-cols-3 grid-cols-2  gap-2 my-14 wow animate__animated animate__zoomIn">-->
+        <!--        @if (isset($companies) && count($companies)>0)-->
+        <!--            @foreach ($companies as $company )-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{$company->getFirstMediaUrl('company') != null ? $company->getFirstMediaUrl('company') : null }}" alt="image">-->
+        <!--            </div>-->
+        <!--            @endforeach-->
+        <!--        @else-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{asset('images/publisher.png')}}" alt="">-->
+        <!--            </div>-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{asset('images/logo company.png')}}" alt="">-->
+        <!--            </div>-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{asset('images/samsung.png')}}" alt="">-->
+        <!--            </div>-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{asset('images/soundware.png')}}" alt="">-->
+        <!--            </div>-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{asset('images/sample.png')}}" alt="">-->
+        <!--            </div>-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{asset('images/company.png')}}" alt="">-->
+        <!--            </div>-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{asset('images/brand.png')}}" alt="">-->
+        <!--            </div>-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{asset('images/fruity.png')}}" alt="">-->
+        <!--            </div>-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{asset('images/publisher.png')}}" alt="">-->
+        <!--            </div>-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{asset('images/logo company.png')}}" alt="">-->
+        <!--            </div>-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{asset('images/samsung.png')}}" alt="">-->
+        <!--            </div>-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{asset('images/soundware.png')}}" alt="">-->
+        <!--            </div>-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{asset('images/sample.png')}}" alt="">-->
+        <!--            </div>-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{asset('images/company.png')}}" alt="">-->
+        <!--            </div>-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{asset('images/brand.png')}}" alt="">-->
+        <!--            </div>-->
+        <!--            <div class="h-16 overflow-hidden flex items-center">-->
+        <!--                <img class="w-full object-cover object-center" src="{{asset('images/fruity.png')}}" alt="">-->
+        <!--            </div>-->
+        <!--        @endif-->
+        <!--    </div>-->
+        <!--</div>-->
+        <!--{{-- end of brands --}}-->
     </section>
 
     <!-- Swiper JS -->
@@ -919,6 +858,15 @@
     .home-section .services .content-div .content.active{
          opacity: 1;
     }
+
+    .mobileServicesBtn-content{
+        opacity: 0;
+    }
+
+    .mobileServicesBtn-content.active{
+        opacity: 1;
+    }
+
     .home-services-button.active{
         /* transform: translateY(-0.75rem); */
         background-color: rgb(226 232 240);
@@ -1004,14 +952,19 @@ $(document).ready(function() {
       $(this).addClass('active');
     });
     
-      function setHomeServicesActiveContent(target) {
+    function setHomeServicesActiveContent(target) {
         $('.home-services-content').removeClass('active');
         $('#' + target).addClass('active');
-      }
-    //   $('#home-achivement-circle-2').mouseenter(function() {
-    //     console.log('mouse entere');
-    //     $('#home-achivement-circle-1').toggleClass('active');
-    // });
+    }
+    $('.mobileServicesBtn').on('click',function(){
+        const target = $(this).data('target');
+        $('.mobileServicesBtn').removeClass('-translate-y-2');
+        $('.mobileServicesBtn-content').removeClass('active');
+        $('#' + target).addClass('active');
+        $(this).addClass('-translate-y-2');
+
+        
+      });
 
    
     

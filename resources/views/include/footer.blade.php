@@ -1,4 +1,4 @@
-<footer class="footer  xl:px-20 lg:px-5 md:px-20 px-5 py-20 text-white font-[300]">
+<footer class="footer  xl:px-20 lg:px-5 md:px-20 px-5 pb-20 pt-5 text-white font-[300]">
     <div class="sm:grid lg:grid-cols-2 sm:grid-cols-2 gap-4">
         <div class="">
             <div class=" mx-auto mb-5">
